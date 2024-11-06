@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "nombre": "Cervecitas con amigos",
     "descripcion": "Juntemonos a tomar un par de birras en este barcito popular",
     "ubicacion": "Lavalle 3565, C1190AAQ, Cdad. Autónoma de Buenos Aires",
@@ -8,6 +9,7 @@
     "privado": false
   },
   {
+    "id": "2",
     "nombre": "Cafe entre amigas",
     "descripcion": "Busco grupo de amigas para probar esta cafeteria de especialidad",
     "ubicacion": "Aráoz 645, C1414, Cdad. Autónoma de Buenos Aires",
@@ -16,6 +18,7 @@
     "privado": false
   },
   {
+    "id": "3",
     "nombre": "Picnic en la plaza",
     "descripcion": "Voy a tocar la guitarra, si queres traer tu instrumento mejor",
     "ubicacion": "Plaza Italia, Cdad. Autónoma de Buenos Aires",
@@ -24,11 +27,21 @@
     "privado": false
   },
   {
+    "id": "4",
     "nombre": "Juntada en mi casa",
     "descripcion": "Partuza en mi casa, despues vamos a bailar",
     "ubicacion": "Guatemala 4505, C1425BUH, Cdad. Autónoma de Buenos Aires",
     "horario": "viernes, noviembre 8, 2024, 23:00hs",
     "cant_personas": "15",
     "privado": true
+  },
+  {
+    "id": "5",
+    "nombre": "Juntada fanatico de Breaking Bad",
+    "descripcion": "Nos juntamos a hablar de la mejor serie del mundo",
+    "ubicacion": "Araoz 2505, C1425BUH, Cdad. Autónoma de Buenos Aires",
+    "horario": "miercoles, noviembre 6, 2024, 18:00hs",
+    "cant_personas": "6",
+    "privado": false
   }
 ]

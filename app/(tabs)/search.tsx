@@ -1,18 +1,16 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, FlatList } from "react-native";
 import eventos from "../../assets/data/events.json";
+import EventosListItem from "../../components/EventosListItem.jsx";
 
 export default function Search() {
-  const evento = eventos[0];
   return (
     <View style={styles.container}>
-      <View style={styles.eventocontainer}>
-        <Text style={styles.descripcion_evento}>{evento.horario}</Text>
-        <Text style={styles.nombre_evento}>{evento.nombre}</Text>
-        <Text style={styles.descripcion_evento}>{evento.descripcion}</Text>
-        <Text style={styles.participantes_evento}>
-          {evento.cant_personas} personas | {evento.ubicacion}
-        </Text>
-      </View>
+      <FlatList
+        data={eventos}
+        contentContainerStyle={{ gap: 10 }}
+        renderItem={({ item, index }) => <EventosListItem item={item} />}
+        keyExtractor={(item) => item.id}
+      />
     </View>
   );
 }
@@ -23,22 +21,6 @@ const styles = StyleSheet.create({
     backgroundColor: "gainsboro",
     justifyContent: "center",
     padding: 10,
-  },
-  eventocontainer: {
-    backgroundColor: "#fff",
-    padding: 10,
-    borderRadius: 10,
-    gap: 5,
-  },
-  nombre_evento: {
-    fontSize: 20,
-    fontWeight: "500",
-  },
-  descripcion_evento: {
-    color: "dimgray",
-  },
-  participantes_evento: {
-    fontSize: 16,
-    color: "dimgray",
+    paddingTop: 70,
   },
 });

@@ -1,9 +1,18 @@
 import { Text, View, StyleSheet } from "react-native";
+import eventos from "../../assets/data/events.json";
 
 export default function Search() {
+  const evento = eventos[0];
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>All the events go here!</Text>
+      <View style={styles.eventocontainer}>
+        <Text style={styles.descripcion_evento}>{evento.horario}</Text>
+        <Text style={styles.nombre_evento}>{evento.nombre}</Text>
+        <Text style={styles.descripcion_evento}>{evento.descripcion}</Text>
+        <Text style={styles.participantes_evento}>
+          {evento.cant_personas} personas | {evento.ubicacion}
+        </Text>
+      </View>
     </View>
   );
 }
@@ -11,11 +20,25 @@ export default function Search() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#25292e",
+    backgroundColor: "gainsboro",
     justifyContent: "center",
-    alignItems: "center",
+    padding: 10,
   },
-  text: {
-    color: "#fff",
+  eventocontainer: {
+    backgroundColor: "#fff",
+    padding: 10,
+    borderRadius: 10,
+    gap: 5,
+  },
+  nombre_evento: {
+    fontSize: 20,
+    fontWeight: "500",
+  },
+  descripcion_evento: {
+    color: "dimgray",
+  },
+  participantes_evento: {
+    fontSize: 16,
+    color: "dimgray",
   },
 });
